@@ -1,4 +1,5 @@
 class FeedsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_feed, only: [:show, :edit, :update, :destroy]
 
   # GET /feeds
@@ -24,7 +25,9 @@ class FeedsController < ApplicationController
   # POST /feeds
   # POST /feeds.json
   def create
-    @feed = Feed.new(feed_params)
+    @feed = Feed.new(:name => feed_params[:name], 
+                     :url => feed_params[:url], 
+                     :user_id => current_user.id)
 
     respond_to do |format|
       if @feed.save

@@ -1,8 +1,12 @@
 require 'test_helper'
 
 class FeedsControllerTest < ActionController::TestCase
+  include Devise::TestHelpers
+
   setup do
     @feed = feeds(:one)
+    @request.env["devise.mapping"] = Devise.mappings[:admin]
+    sign_in User.create(:admin)
   end
 
   test "should get index" do
