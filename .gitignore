@@ -18,6 +18,5 @@
 
 vendor/
 *~
-bin/
 log/
 *.sqlite3config.ru
