@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.0'
 gem 'sqlite3'
 gem 'execjs'
@@ -10,6 +9,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
 gem 'devise'
+gem 'feedjira'
 gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'jquery-rails'

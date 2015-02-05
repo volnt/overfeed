@@ -1,12 +1,15 @@
 <h1>Listing Feeds</h1>
 
 <div class="row">
-  <% @feeds.each do |feed| %>
-  <div class="col-lg-6 col-sm-12">
-    <h3><%= feed.name %></h3>
-    <td><%= feed.url %></td>
-  </div>
-  <% end %>
+    <% @feeds.each do |url, feed| %>
+	<div class="col-lg-6 col-sm-12 feed">
+	    <% if !feed.is_a? Integer %>
+		<h2><%= feed.title %></h2>
+		<% feed.entries.first(5).each do |entry| %>
+		    <h3><a href="<%= entry.url %>"><%= entry.title %></a></h3>
+		    <%= entry.summary.html_safe %>
+		<% end %>
+	    <% end %>
+	</div>
+    <% end %>
 </div>
-
-<br>
