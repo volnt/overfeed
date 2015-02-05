@@ -5,14 +5,12 @@ class FeedsControllerTest < ActionController::TestCase
 
   setup do
     @feed = feeds(:one)
-    @request.env["devise.mapping"] = Devise.mappings[:admin]
-    sign_in User.create(:admin)
+    sign_in users(:one)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:feeds)
   end
 
   test "should get new" do

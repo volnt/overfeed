@@ -1,8 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  url: MyString
+  name: "YC News"
+  url: "http://news.ycombinator.com/rss"
+  user_id: 1
 
 two:
   name: MyString

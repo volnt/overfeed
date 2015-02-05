@@ -2,8 +2,7 @@ require 'test_helper'
 
 class FeedTest < ActiveSupport::TestCase
   def setup
-    @feed = Feed.new(name: "YC News", url: "http://news.ycombinator.com/rss", 
-                     user_id: 1)
+    @feed = feeds(:one)
   end
   
   test "should be valid" do
