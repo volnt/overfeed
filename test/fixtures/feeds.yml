@@ -6,5 +6,6 @@ one:
   user_id: 1
 
 two:
-  name: MyString
-  url: MyString
+  name: "Reuters Pictures"
+  url: "http://feeds.reuters.com/ReutersPictures"
+  user_id: 1

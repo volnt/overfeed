@@ -1,0 +1,12 @@
+<h1>Listing Feeds</h1>
+
+<div class="row">
+  <% @feeds.each do |feed| %>
+  <div class="col-lg-6 col-sm-12">
+    <h3><%= feed.name %></h3>
+    <td><%= feed.url %></td>
+  </div>
+  <% end %>
+</div>
+
+<br>
